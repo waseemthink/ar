@@ -9,13 +9,20 @@
 </head>
 <body>
     <div id="navbar">
-        <a href="../index.htm" style="text-decoration: none; font-size: 30px; float: left; height: 100%; line-height: 150%; margin-left: 0.2in; background-color: steelblue; width: 0.5in; text-align: center; color: white;">&looparrowleft;</a>
+        <button onclick="close()" style="text-decoration: none; font-size: 30px; float: left; height: 100%; line-height: 150%; margin-left: 0.2in; background-color: steelblue; width: 0.5in; text-align: center; color: white;">&looparrowleft;</button>
     </div>
     <div id="nbmargin"></div>
     <div id="heading">
         <h1 style="margin-bottom: 10px; color: steelblue;">كيف تكون الشراكات عَقاراً سحرياً للمضي قدماً</h1>
         <span style="margin-right: 0.2in; margin-bottom: 0px; margin-top: 0px; font-size: 16px;"><span style="font-family: sporto6; color: steelblue; font-size: 80%;">Z</span> وسيم سعيد</span> <br>
         <span style="margin-right: 0.2in; margin-bottom: 0px; margin-top: 0px; font-size: 16px;"><span style="font-family: sporto6; color: steelblue; font-size: 80%;">s</span> الهندسة الصناعية والسكان</span>
+    </div>
+    <div id="resourceTagDiv">
+        <textarea name="" id="resourceTagText" cols="30">محمدسعيد ، وسيم ، 2021 ، كيف تكون الشراكات عَقاراً سحرياً للمضي قدماً ، على الانترنت https://waseemthink.github.io/ar/</textarea>
+        <button id="resourceTagCopy" onclick="copyres()">
+           اصغط لنسخ الاستشهاد
+        </button>
+        <span id="clipstatus"></span>
     </div>
     <div id="contentBody">
         <p>
@@ -51,3 +58,15 @@
     <div id="footer"></div>
 </body>
 </html>
+
+<script>
+    function copyres(){
+        res = document.getElementById("resourceTagText");
+        res.select();
+        document.execCommand("copy");
+        document.getElementById("clipstatus").innerHTML = "تم النسخ ، يمكنك اللصق في قائمة المصادر الخاصة بمقالتكم في حال الاقتباس من هنا";
+    }
+    function close(){
+        window.close();
+    }
+</script>

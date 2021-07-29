@@ -19,6 +19,14 @@
         <span style="margin-right: 0.2in; margin-bottom: 0px; margin-top: 0px; font-size: 16px;"><span style="font-family: sporto6; color: steelblue; font-size: 80%;">Z</span> وسيم سعيد</span> <br>
         <span style="margin-right: 0.2in; margin-bottom: 0px; margin-top: 0px; font-size: 16px;"><span style="font-family: sporto6; color: steelblue; font-size: 80%;">s</span> الهندسة الصناعية والسكان</span>
     </div>
+    <div id="resourceTagDiv">
+        <textarea name="" id="resourceTagText" cols="30">
+            محمدسعيد ، وسيم ، 2021 ، مقدمة تقرير عمل تدريب الروبوتيك -1- المقام بالتعاون بين فريق الذكاء الصناعي بجامعة الفرات وغرفة التجارة والصناعة ، على الانترنت https://waseemthink.github.io/ar/</textarea>
+        <button id="resourceTagCopy" onclick="copyres()">
+           اصغط لنسخ الاستشهاد
+        </button>
+        <span id="clipstatus"></span>
+    </div>
     <div id="contentBody">
         <p>
             بلدنا سورية هي نحن كلنا ، كما أن الوقت مناسب دائماً لجهود التنمية التي تقوم بالأفراد الذين يشكلون هم أنفسهم جوهر ومقصد تلك الجهود ، لعل هذه الجهود هي الشيء الوحيد الذي لا يصادف وقتاً غير مناسب ، وهي الشيء الوحيد ربما الذي يتفق الجميع على وجوب حدوثه على مدى تباين الاختلافات جميعها.
@@ -49,3 +57,16 @@
     <div id="footer"></div>
 </body>
 </html>
+
+
+<script>
+    function copyres(){
+        res = document.getElementById("resourceTagText");
+        res.select();
+        document.execCommand("copy");
+        document.getElementById("clipstatus").innerHTML = "تم النسخ ، يمكنك اللصق في قائمة المصادر الخاصة بمقالتكم في حال الاقتباس من هنا";
+    }
+    function close(){
+        window.close();
+    }
+</script>
