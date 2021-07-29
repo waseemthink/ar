@@ -4,9 +4,6 @@
     height: 0.6in;
     background-color: white;
     z-index: 1;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
 }
 #navbarMargin{
     height: 0.6in;
@@ -21,13 +18,21 @@
     font-weight: bold;
     color: black;
     border-radius: 0px;
-    width: 100%;
+    width: 24%;
 }
 .nbBtn:hover{
     background-color: teal;
     color: white;
 }
-
+@supports(display: grid){
+    #navbar{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .nbBtn{
+        width: 100%;
+    }
+}
 @media screen and (min-width: 600px) {
     #navbar{
         width: 75%;
