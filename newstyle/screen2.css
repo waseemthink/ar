@@ -2,46 +2,27 @@
     display: flex;
     flex-wrap: wrap;
 }*/
-@media screen and (min-width: 400px) {
-    #screen2{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-@media screen and (min-width: 600px) {
-    #screen2{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media screen and (min-width: 800px) {
-    #screen2{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media screen and (min-width: 900px) {
-    #screen2{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+
 #screen2 .card{
-    background-color: steelblue;
-    background-color: cornflowerblue;
-    box-shadow: 0px 0px 2px 0px rgb(64, 64, 64);
-    border-radius: 30px;
-    padding-top: 5px;
-    align-items: center;
-    margin-left: 0.1in; margin-right: 0.1in;
-    margin-top: 0.2in;
-    padding: 5px;
-    max-height: 3.5in;
+   width: calc(100%-0.2in);
+   padding: 0.2in;
+   border-right: 3px solid coral;
+   margin-bottom: 0.2in;
+   color: rgb(64, 64, 64);
 }
 
 .card button{
     margin: 0px;
     margin-top: 5px;
+    font-size: 20px;
+    border: 1px solid white;
+}
+.card button::before{
+    content: ']';
+    font-family: sporto2;
+    float: right;
+    margin-top: 4px;
+    margin-left: 5px;
 }
 .cardImg{
     width: 94%;
@@ -52,14 +33,14 @@
 }
 
 .cardTitle{
-    color: white;
+    color: inherit;
     font-size: 30px;
     font-weight: bold;
     display: block;
 }
 .cardAbout{
     display: block;
-    color: white;
+    color: inherit;
 }
 
 .price{
@@ -79,4 +60,43 @@
 }
 .cardOffers .sporto1, .cardOffers .sporto2, .cardOffers .sporto3, .cardOffers .sporto4, .cardOffers .sporto5, .cardOffers .sporto6{
     margin-left: -10px;
+}
+
+@media screen and (min-width: 400px) {
+    #screen2{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 600px) {
+    #screen2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #screen2 .card{
+        background-color: steelblue;
+        background-color: cornflowerblue;
+        background-color: slateblue;
+        border: unset;
+        box-shadow: 0px 0px 2px 0px rgb(64, 64, 64);
+        border-radius: 30px;
+        padding-top: 5px;
+        height: min-content;
+        margin-left: 0.1in; margin-right: 0.1in;
+        margin-top: 0.2in;
+        padding: 5px;
+        color: white;
+    }
+}
+@media screen and (min-width: 800px) {
+    #screen2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 900px) {
+    #screen2{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
