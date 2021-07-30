@@ -52,7 +52,11 @@ mark{
     margin-bottom: 0.1in;
     padding: 5px;
 }
-
+.textarea{
+    width: 100%;
+    resize: vertical;
+    outline: 1px rgba(64, 64, 64, 0.495) solid;
+}
 button{
     outline: none;
     border: none;

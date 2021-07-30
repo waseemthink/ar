@@ -7,6 +7,7 @@
    width: calc(100%-0.2in);
    padding: 0.2in;
    border-right: 3px solid coral;
+   border-right: 5px solid slateblue;
    margin-bottom: 0.2in;
    color: rgb(64, 64, 64);
 }
@@ -19,6 +20,13 @@
 }
 .card button::before{
     content: ']';
+    font-family: sporto2;
+    float: right;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+.card .callbefore::before{
+    content: '^';
     font-family: sporto2;
     float: right;
     margin-top: 4px;
