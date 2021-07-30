@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waseemthink - تقارير عمل</title>
+    <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <div id="navbar">
+        <a href="../index.htm" style="text-decoration: none; font-size: 30px; float: left; height: 100%; line-height: 150%; margin-left: 0.2in; background-color: steelblue; width: 0.5in; text-align: center; color: white;">&looparrowleft;</a>
+    </div>
+    <div id="nbmargin"></div>
+    <div id="heading">
+        <h1 style="margin-bottom: 0px; font-size: 25px; color: steelblue; padding: 10px;">تقارير عمل وبروشورات  لبعض أعمالي السابقة ، لكل منها حكاية جهد ومتعة!</h1>
+        <span style="color: rgb(64, 64, 64); font-size: 14px; margin-right: 10px; color: steelblue; font-style: italic;">
+            <span style="font-family: lecafetech2; font-style: unset;">$</span>
+            اضغط على العنوان المرغوب الاطلاع عليه
+        </span>
+    </div>
+    <div id="contentBody">
+        <table>
+            <tr style="vertical-align: top;">
+                <td>
+                    <span class="docico" style="font-family: cov;">t</span>
+                </td>
+                <td>
+                    <span onclick="loaddoc('./bc-Doc1-depOfInnovation.pdf')" id="doc1" class="doclink">
+                        تقرير عمل - تدريب الروبوتيك المستوى الأول - جامعة الفرات
+                    </span>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <span class="docico" style="font-family: cov;">t</span>
+                </td>
+                <td>
+                    <span onclick="loaddoc('./bc-Doc1-depOfInnovation.pdf')" id="doc1" class="doclink">
+                       بروشور مشروع نظام الأتمتة المؤسساتية المزود بـ API
+                    </span>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <span class="docico" style="font-family: cov;">t</span>
+                </td>
+                <td>
+                    <span onclick="loaddoc('./bc-Doc1-depOfInnovation.pdf')" id="doc1" class="doclink">
+                        تقرير عمل مختصر - تدريب الروبوتيك 12/2020- جامعة الفرات
+                    </span>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <span class="docico" style="font-family: cov;">t</span>
+                </td>
+                <td>
+                    <span onclick="loaddoc('./bc-Doc1-depOfInnovation.pdf')" id="doc1" class="doclink">
+                        مسودة (شخصية) للتعاون المقترح بين كلية الهندسة الميكانيكية وغرفة التجارة والصناعة
+                    </span>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <span class="docico" style="font-family: cov;">t</span>
+                </td>
+                <td>
+                    <span onclick="loaddoc('./bc-Doc1-depOfInnovation.pdf')" id="doc1" class="doclink">
+                        مسودة مقترح خطة عمل تنموية لكلية الهندسة الميكانيكة لتطوير العملية التعليمية
+                    </span>
+                </td>
+            </tr>
+
+        </table>
+        <iframe id="docviewer" style="width: 90%; height: 0px; margin-left: 5%; margin-right: 5%;" frameborder="0"></iframe>
+    </div>
+    <div id="comments">
+        <input type="email" placeholder="البريد الإلكتروني..." name="email" id="useremail">
+        <textarea name="" placeholder="تعليق خاص عبر البريد الإلكتروني..." id="usercomment" rows="5"></textarea>
+        <button>أرسل</button>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+
+<script>
+    function loaddoc(doc){
+        document.getElementById("docviewer").src = doc;
+        document.getElementById("docviewer").style.height = "80vh";
+    }
+</script>
