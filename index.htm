@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./newstyle/rightdesktop.css">
     <link rel="stylesheet" href="./newstyle/welcome.css">
     <link rel="stylesheet" href="./newstyle/mm.css">
-    
+
     <link rel="stylesheet" href="./style/font/css/sporto1.css">
     <link rel="stylesheet" href="./style/font/css/sporto2.css">
     <link rel="stylesheet" href="./style/font/css/sporto3.css">
@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="./style/font/css/sporto5.css">
     <link rel="stylesheet" href="./style/font/css/sporto6.css">
 
-    <title>Waseem Saeed - Official Website</title>
+    <!--<title>Waseem Saeed - Official Website</title>-->
+    <title>الرئيسية - منصة وسيم سعيد للتنمية</title>
 </head>
 <body onload="ready(true)" onoffline="ready(false)" ononline="online()">
     <div id="navbar">
@@ -36,8 +37,8 @@
         <a href="#screen2" style="text-decoration: none;">
             <button class="nbBtn">مواضيع</button>
         </a>
-        <a href="" style="text-decoration: none;">
-            <button class="nbBtn">ترجمات</button>
+        <a href="#donate" style="text-decoration: none;">
+            <button class="nbBtn">ساهم</button>
         </a>
         <a target="_blank" href="./docs/index.htm" style="text-decoration: none;">
             <button class="nbBtn">أعمالي</button>
@@ -151,7 +152,7 @@
         <div id="mymission-sub">
             <span id="mmTitle">
                 هل سأحقق هدفي بتشغيل أو المساهمة بتنمية 7,000 جامعة حول العالم!
-            </span>
+                        </span>
             <span id="mmDone">
                 جامعات تمت: <span class="keyword">1 جامعة</span><br>
                 ساهمت بتنمية: <span class="keyword">1 جامعة</span><br>
@@ -162,10 +163,61 @@
             <button onclick="undisplay('mymission')">إغلاق النافذة</button>
         </div>
     </div>
+    <!--<div class="screen" id="screenAbout" style="padding-top: 0.6in;">
+        <h2>الخبرة هي الاسم الأنيق الذي نطلقه على تجاربنا الفاشلة</h2>
+        <h4>
+            درست هندسة التصميم والإنتاج بمعدل 83.67% حتى السنة الرابعة 
+            (<a href="#donateAction" style="text-decoration: none; color: steelblue; font-style: italic;">
+                اضغط هنا لمساعدتي على استئناف دراستي
+            </a>)
+        </h4>
+        <h4>رئيس فريق الربوتيك والذكاء الصناعي بجامعة الفرات</h4>
+    </div>-->
+    <div class="screen" id="screenAbout" style="padding-top: 0.6in;">
+        <!--<h2>تقدم المنصة محتوى وخدمات تفاعلية بمجال تنمية المؤسسات والأفراد</h2>
+        <h4>
+            أدرس هندسة التصميم والإنتاج بمعدل 83.67% حتى السنة الرابعة 
+            (<a href="#donateAction" style="text-decoration: none; color: steelblue; font-style: italic;">
+                اضغط هنا لمساعدتي على استئناف دراستي
+            </a>)
+        </h4>-->
+        <h4>
+            إن لم تظهر سيرتي الذاتية
+            <a href="./docs/waseem00963930195071.pdf">حملها بالضغط هنا</a>
+        </h4>
+        <iframe src="./docs/waseem00963930195071.pdf" style="width: 100%; min-height: 80vh;" frameborder="0"></iframe>
+    </div>
+    <!--<div id="donateAction" class="screen" style="padding-top: 0.6in;">
+        <h2>
+            
+        </h2>
+        <img src="./waseemnft.jpg" style="width: 100%;" alt="">
+        <h4>
+            لمساعدتي على استئناف دراستي ، يمكنك شراء عمل رقمي مني
+            على أن تعرضه للبيع خلال 6 أشهر بربحية 20% (لك) عن السعر الذي اشتريته به
+            (أو: تبرع فقط <a href="">من هنا &nwarrow; </a> )
+        </h4>
+        <h4>
+            <span class="sporto2" style="color: crimson;">A</span> 
+            أنفق كامل المبلغ على أشياء تجعلك سعيداً! (أو تسديد ديون)
+            <br>
+            <span class="sporto2" style="color: crimson;">A</span>
+             امنح 2.4% من إجمالي سعر البيع لعمل خيري.
+             <br>
+            <span class="sporto2" style="color: crimson;">A</span>
+             قم بالبيع بنفس هذه الشروط للمشتري ، بما في ذلك هذا الشرط
+        </h4>
+        <br>
+        <center>
+            <button>أو تبرع فقط من هنا</button>
+        </center>
+    </div>
+    <div class="screen" id="donate">
+        <iframe src="https://donorbox.org/embed/my-education-with-love" name="donorbox" allowpaymentrequest="" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important"></iframe>
+    </div>-->
 </body>
 </html>
 
-<script src="./server/jspyapi.js"></script>
 <script>
     //saveRequest("filename", "data");
     function submitReq(reqID, type){
@@ -177,7 +229,7 @@
         _filename = "req" + Math.random(Math.sin(Math.tanh(Math.random(71070))));
         saveRequest(_filename, JSON.stringify(_data));
     }
-    aveRequest("", "['newVisit']");
+    //aveRequest("", "['newVisit']");
     function requpdates(){
         contact = document.getElementById("useremailtofollow").value;
         _data = [{contact: contact, type: "getupdates"}];
@@ -196,4 +248,18 @@
     function undisplay(elID){
         document.getElementById(elID).style.display = "none";
     }
+
+    //calc a 10 sales starts from 100$
+    init = 100; //$
+    sales = 10;
+    prices = [];
+    for (let index = 0; index <= sales; index++) {
+        init = init + ((init*20)/100);
+        prices.push(init);
+        if(index == sales){
+            console.log(index + ':: ' + prices[index]);
+        }
+    }
 </script>
+
+<!--<script src="https://donorbox.org/widget.js" paypalExpress="false"></script>-->
